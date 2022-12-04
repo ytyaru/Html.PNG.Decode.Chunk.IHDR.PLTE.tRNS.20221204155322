@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="PNGファイルのチャンク共通部分を読む">
+<meta name="author" content="ytyaru">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
+<link rel="icon" href="asset/image/avator.png">
+<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<h1>PNGファイルのチャンクデータを読む（IHDR,PLTE,tRNS）</h1>
+<div id="drop-zone" style="border: 1px solid; padding: 30px;">
+    <p>ファイルをドラッグ＆ドロップもしくは</p>
+    <input type="file" name="file" id="file-input">
+    <ul>
+        <li><a href="https://github.com/ytyaru/Html.PNG.Signature.20221202103208/blob/master/docs/asset/image/monar-mark-gold.png?raw=true">テスト用PNG画像ファイル</a></li>
+        <li><a href="https://raw.githubusercontent.com/ytyaru/Html.PNG.Signature.20221202103208/master/README.md">テスト用非PNGファイル</a></li>
+    </ul>
+</div>
+<ul>
+    <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Typed_arrays">JavaScript の型付き配列</a></li>
+    <li><a href="https://www.w3.org/TR/png/#5PNG-file-signature">PNGファイルシグネチャ</a></li>
+</ul>
+<!--
+<fieldset>
+<legend>バイナリ操作API</legend>
+<select id="api"><option value="DataView">DataView</option><option value="TypedArray">TypedArray</option></select>
+<ul>
+    <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Typed_arrays">JavaScript の型付き配列</a></li>
+    <li><a href="https://www.w3.org/TR/png/#5PNG-file-signature">PNGファイルシグネチャ</a></li>
+</ul>
+</fieldset>
+-->
+<p id="is-png"></p>
+<div id="preview"></div>
+<div id="chunks"></div>
+<div id="IHDR"></div>
+<div id="PLTE"></div>
+<div id="tRNS"></div>
+</body>
+</html>
+<!-- https://coliss.com/articles/build-websites/operation/work/html-template-for-web-apps-or-sites.html -->
+<!-- https://coliss.com/articles/build-websites/operation/work/html5-template-for-2018.html -->
